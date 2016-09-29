@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="mystyle.css" />
-    <title>Using the for Loop</title>
+    <title>Simulating Coin Tosses</title>
     <meta charset="utf-8">
     <!-- Bootstrap 3 is mobile-first -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,17 +15,23 @@
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   </head>
   <body>
-    <h1>What Can JavaScript Do?</h1>
+    <!-- .container-fluid spanning the entire width of viewport -->
+    <div class="container-fluid">
+        <h2 class="text-center">Simulating Coin Tosses</h2>
+          <!-- form element defines a form that is used to collect user input -->
 
-    <p>JavaScript can change HTML attributes.</p>
+            <div>
+              <img id="myImage" src="HeadorTail.jpg" style="width:100px">
+            </div>
+            <!-- Trigger the modal with a button -->
+            <div>
+              <button id="myBtn" type="button" class="btn btn-success btn-lg">
+                Toss
+              </button>
+            </div>
 
-    <p>In this case JavaScript changes the src (source) attribute of an image.</p>
 
-    <button onclick="document.getElementById('myImage').src='heads.jpg'">Heads</button>
-
-    <img id="myImage" src="HeadorTail.jpg" style="width:100px">
-
-    <button onclick="document.getElementById('myImage').src='tails.png'">Tails</button>
+    </div>
     <!-- NOTE: This tag connects the JS to our HTML-->
     <script src="app.js"></script>
   </body>

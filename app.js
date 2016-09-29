@@ -1,29 +1,19 @@
 // Event listener that fires when a user clicks a button.
 document.getElementById("myBtn").addEventListener("click", function(){
-  computeSpeed();
+  coinToss();
 });
 
-// Constants
-var START_SPEED = 60;
-var END_SPEED = 130;
-var INTERVAL = 10;
-var CONVERSION_FACTOR = 0.6214;
+function coinToss() {
+  // Return a random number between 1 and 2
+  var sideUp = Math.floor((Math.random() * 2) + 1);
+  console.log(sideUp);
 
-// variables
-var kph;      // Kilometers per hour
-var mph;      // Miles per hour
-
-
-function computeSpeed() {
-  // Display the table of speeds
-  for (kph = START_SPEED; kph <= END_SPEED; kph += INTERVAL) {
-    // Calculate miles per hour.
-    mph = kph * CONVERSION_FACTOR;
-
-    // Display to console the conversion.
-    console.log(kph + " KPH is the same as " + mph.toFixed(2) + " MPH");
+  // Display the side that is up
+  if (sideUp === 1) {
+    // Display tails up
+    document.getElementById('myImage').src='tails.png';
+  } else {
+    // Display heads up
+    document.getElementById('myImage').src='heads.jpg';
   }
-  // Display the last speed conversion
-  document.getElementById('outSpeed').innerHTML = kph + " KPH is the same as " +
-    mph.toFixed(2) + " MPH";
 }
